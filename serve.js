@@ -1,11 +1,13 @@
-const path = require('path')
 const Restapify = require('restapify').default
+const {resolve} = require('path')
 
-const apiFolderPath = path.resolve(__dirname, './api')
+const apiFolderPath = resolve(__dirname, './api')
 
 const rpfy = new Restapify({
   rootDir: apiFolderPath,
-  port: process.env.PORT,
+  port: process.env.PORT || 6767,
+  publicPath: process.env.PUBLIC_PATH || 'api/',
+  openDashboard: process.env.OPEN_DASHBOARD_PATH || 'true'
 })
 
 console.log("route", rpfy.getServedRoutes());
