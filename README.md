@@ -1,21 +1,63 @@
-# Restapify template for Railway
+# 🚀 Restapify Template for Railway
 
-Template to deploy your restapify mocked API on the [Railway](https://railway.app/) platform.
+Easily deploy a [Restapify](https://restapify.vercel.app) mock API to [Railway](https://railway.app/) — perfect for testing and frontend development when your backend isn't ready yet.
 
-## Getting started
+---
 
-Open a new terminal and serve the mocked API:
+## ⚙️ Getting Started
+
+### 🔧 Local Development
+
+1. Install dependencies:
 
 ```bash
+npm install
+yarn install
+```
+
+2. Start the mock server:
+
+```bash
+npm run start
 yarn start
 ```
 
-Then go to the dashboard by adding `/restapify` to the browser url.
+3. Open your browser:
 
-📡 API:       http://localhost:6767/api/
-🛠  Dashboard: http://localhost:6767/restapify
+- API base URL: [`http://localhost:6767/api/`](http://localhost:6767/api/)
+- Dashboard: [`http://localhost:6767/restapify`](http://localhost:6767/restapify)
 
-This example serve the routes:
+> The dashboard provides a UI to explore and test your mock endpoints.
+
+---
+
+## 📦 Environment Variables
+
+You can configure the mock server behavior using environment variables via a `.env` file:
+
+| Variable              | Default                 | Description                                               |
+|-----------------------|-------------------------|-----------------------------------------------------------|
+| `PORT`                | `6767`                  | Port where the server runs locally                        |
+| `PUBLIC_PATH`         | `api/`                  | Base path for all mock routes                             |
+| `PUBLIC_URL`          | `http://localhost:6767` | Full URL used in logs and dashboard links                 |
+| `OPEN_DASHBOARD_PATH` | `true` (only if local)  | Open dashboard in browser when server starts (local only) |
+
+### Example `.env` file:
+
+```env
+PORT=6767
+PUBLIC_PATH=api/
+PUBLIC_URL=http://localhost:6767
+OPEN_DASHBOARD_PATH=true
+```
+
+> In Railway, `PUBLIC_URL` is set automatically via `RAILWAY_PUBLIC_DOMAIN` in most setups.
+
+---
+
+## 🌐 Example Routes Served
+
+This template includes the following mocked endpoints:
 
 ```
 GET    /api/me
@@ -27,4 +69,23 @@ DELETE /api/users/[userid]
 GET    /api/users/[userid]/comments
 ```
 
-[Documentation](https://restapify.vercel.app/docs)
+You can modify or extend these by editing the files in the `api/` directory.
+
+---
+
+## 🚀 Deploy to Railway
+
+Click the button below to deploy this project instantly:
+
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/template/HK3yyB?referralCode=mexdelgado)
+
+Once deployed:
+
+- API: `https://your-subdomain.up.railway.app/api/`
+- Dashboard: `https://your-subdomain.up.railway.app/restapify`
+
+---
+
+## 📚 Documentation
+
+📖 [https://restapify.vercel.app/docs](https://restapify.vercel.app/docs)

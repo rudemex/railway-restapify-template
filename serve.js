@@ -5,7 +5,7 @@ const { resolve } = require('path');
 const PORT = process.env.PORT || 6767;
 const PUBLIC_PATH = process.env.PUBLIC_PATH || 'api/';
 const PUBLIC_URL = process.env.PUBLIC_URL || `http://localhost:${PORT}`;
-const OPEN_DASHBOARD = process.env.OPEN_DASHBOARD_PATH === 'false';
+const OPEN_DASHBOARD = process.env.OPEN_DASHBOARD_PATH === 'true';
 
 // Ruta a la carpeta con los JSON
 const apiFolderPath = resolve(__dirname, './api');
