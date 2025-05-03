@@ -17,8 +17,8 @@
   "homepage": "https://github.com/rudemex/railway-restapify-template#readme",
   "license": "MIT",
   "scripts": {
-    "start": "restapify serve api/",
-    "start:serve": "node ./serve.js",
+    "start": "node ./serve.js",
+    "start:local": "restapify serve api/",
     "format": "prettier --write \"**/*.json\"",
     "lint": "oxlint \"**/*.json\" --fix",
     "pre-commit": "lint-staged",

@@ -7,10 +7,13 @@ Template to deploy your restapify mocked API on the [Railway](https://railway.ap
 Open a new terminal and serve the mocked API:
 
 ```bash
-yarn restapify serve api/
+yarn start
 ```
 
 Then go to the dashboard by adding `/restapify` to the browser url.
+
+📡 API:       http://localhost:6767/api/
+🛠  Dashboard: http://localhost:6767/restapify
 
 This example serve the routes:
 
